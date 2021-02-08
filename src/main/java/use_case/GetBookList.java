@@ -3,6 +3,7 @@ package use_case;
 import domain.BookRepository;
 import domain.models.Book;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class GetBookList {
@@ -13,7 +14,7 @@ public class GetBookList {
         this.bookRepository = bookRepository;
     }
 
-    List<Book> getAllAvailableBook(){
+    public List<Book> getAllAvailableBook() throws SQLException {
         return this.bookRepository.getAllBook();
     }
 }
