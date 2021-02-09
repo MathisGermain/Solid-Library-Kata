@@ -37,6 +37,9 @@ public class InMemoryBook implements BookRepository{
             bookList.add(newBook);
         }
 
+        resultSet.close();
+        statement.close();
+        connect.close();
         return bookList;
     }
 
